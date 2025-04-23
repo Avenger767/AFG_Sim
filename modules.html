@@ -8,87 +8,93 @@
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: #fefefe;
+      background: #fdfdfd;
       margin: 0;
       padding: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      min-height: 100vh;
     }
     h1 {
       text-align: center;
       color: #4B0082;
+      font-size: 26px;
+      margin-bottom: 50px;
     }
-    .module-container {
+    .module-section {
       display: flex;
-      justify-content: center;
-      gap: 100px;
+      gap: 80px;
       margin-bottom: 40px;
     }
-    .module {
+    .group {
       text-align: center;
     }
-    .module h2 {
-      font-size: 24px;
+    .group-title {
+      background-color: #6A4FBF;
       color: white;
-      background: #673AB7;
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
+      font-size: 22px;
+      font-weight: bold;
+      border-radius: 100%;
+      width: 140px;
+      height: 140px;
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 20px;
     }
-    .submodules {
+    .branches {
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
-    .submodules div {
-      background: #7B68EE;
+    .branches div {
+      background: #6A4FBF;
       color: white;
-      padding: 10px 15px;
-      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 16px;
+      border-radius: 8px;
+      width: 160px;
+      margin: 0 auto;
       font-weight: 500;
     }
-    button {
-      padding: 14px 32px;
-      font-size: 18px;
-      background-color: #2b63d9;
+    .start-button {
+      margin-top: 40px;
+      font-size: 20px;
+      background-color: #3056D3;
       color: white;
+      padding: 14px 34px;
       border: none;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
-    button:hover {
-      background-color: #1c45a3;
+    .start-button:hover {
+      background-color: #1f3ea7;
     }
   </style>
 </head>
 <body>
-  <h1>Select Training Module</h1>
-  <div class="module-container">
-    <div class="module">
-      <h2>7000 XR</h2>
-      <div class="submodules">
+  <h1>Select Your System Architecture</h1>
+  <div class="module-section">
+    <div class="group">
+      <div class="group-title">7000 XR</div>
+      <div class="branches">
         <div>Emm Motion</div>
         <div>MPIC Interface</div>
         <div>Tropos Visual</div>
       </div>
     </div>
-    <div class="module">
-      <h2>Classic</h2>
-      <div class="submodules">
+    <div class="group">
+      <div class="group-title">Classic</div>
+      <div class="branches">
         <div>HPU Motion</div>
         <div>DMC Interface</div>
         <div>Rockwell Visual</div>
       </div>
     </div>
   </div>
-  <button onclick="window.location.href='interface.html'">Start Quiz</button>
+  <button class="start-button" onclick="window.location.href='interface.html'">Start Quiz</button>
 </body>
 </html>
