@@ -1,1 +1,1 @@
-# AFG_Sim
+# AFG_SimTech
